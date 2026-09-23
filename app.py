@@ -15,9 +15,11 @@ import json
 import os
 import re
 import tempfile
+from flask_cors import CORS
 
 
 app = Flask(__name__)
+CORS(app)
 
 # Path to the JSON file used as our simple data storage.
 DATA_FILE = Path("courses.json")
